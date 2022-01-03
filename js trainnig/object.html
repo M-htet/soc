@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object.js trainning</title>
+    <style>
+      .a {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+
+  <div class="a"></div>
+  <div class="b"></div>
+
+  <body>
+    <h1>Object training - random</h1>
+    <!-- <script src="object.js"></script> -->
+    <!-- <script>
+        const dice = {
+            sides:6,
+            roll(count){
+                let a = [];
+                let b = [];
+                // console.log(this);
+                for ( let i = 0; i<count; i++){
+                    let res = Math.floor(this.sides * Math.random()) +1;
+                    res <= 3 ? a.push(res) : b.push(res);
+                }
+                console.log(`a times`, a.length);
+                console.log(`b times`, b.length);
+
+                // ! =
+
+                if (a.length !== b.length){
+                    const ans = a.length > b.length ? "a is winner" : "b is winner";
+                    console.log(ans);
+                }else{
+                    console.log("game is draw");
+                }
+            }
+        };
+        dice.roll(10);
+    </script> -->
+    <script>
+      const todos = [
+          {
+              id: 1,
+              job: "go to sittwe",
+              isDone: true,
+          },
+                      {
+              id: 2,
+              job: "go to gym",
+              isDone: false,
+          },            {
+              id: 3,
+              job: "go to ygn",
+              isDone: true,
+          }];
+          console.log(todos);
+          console.log(todos[1]);
+          console.log(todos[2].isDone);
+
+          const toJson = JSON.stringify(todos); //to json
+          console.log(toJson);
+          const normal = JSON.parse(toJson); //to object
+          console.log(normal);
+
+          for (const key in todos) {
+              if (Object.hasOwnProperty.call(todos, key)) {
+                  const element = todos[key];
+                  
+              }
+          }
+          for ( const val of todos ){
+              console.log(val.job);
+              console.log(val.isDone);
+          }
+          todos.forEach((res) => {
+              console.log(res.id);
+              console.log(res.job);
+          }
+          );
+            const job = todos.map((todo)=>{
+                return todo.job;
+            })
+            console.log(job);
+            console.log(job[1]);
+    </script>
+  </body>
+</html>
